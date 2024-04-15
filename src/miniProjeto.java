@@ -24,6 +24,7 @@ public class miniProjeto {
         "\n'Subir na árvore' mais próxima ou 'entrar no matagal'?\n");
         
         String segundaEscolha = ler.nextLine();
+        
 
         if (segundaEscolha.equals("subir na árvore")) {
             System.out.println(
