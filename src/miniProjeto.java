@@ -10,6 +10,7 @@ public class miniProjeto {
         "\nUm feixe de luz na parade te fez olhar para trás, havia uma janela e, nesse panorama geral, você também nota um lampejo metálico num canto do cômodo, talvez uma faca.\n "+
         "\nNesse momento a porta às suas costas estilhaça.\n"+
         "\n'Saltar pela janela' ou 'pegar faca', o que fazer?'\n");
+        
     
     String primeiraEscolha = ler.nextLine();
 
@@ -81,7 +82,6 @@ public class miniProjeto {
     else {
         System.out.println("Escolha inválida!");
     }
-
 
     ler.close();
     }
