@@ -32,6 +32,7 @@ public class miniProjeto {
                 "\nAli, de bruços, você observa os cachorros cercarem a árvore e todo o movimento no prédio, provocado pelo tulmulto dos bichos.\n"+
                 "\nA única ação que lhe resta é fechar os olhos e esperar o fim do suplício.");
         }
+        
 
         else if (segundaEscolha.equals("entrar no matagal")) {
             System.out.println(
