@@ -3,85 +3,103 @@ public class miniProjeto {
     public static void main(String[] args) {
     
     Scanner ler = new Scanner(System.in);
-// Ínicio
+
+    // Prólogo e instruções
     System.out.println(
         "\n\n\n---------------------------------------------------------------------------------------------------------------------------------"+
-        "\n[...]\nAs batidas estremeciam a porta, ensurdeciam. Nesse ponto a madeira podre não duraria mais.\n"+
-        "\nUm feixe de luz na parade te fez olhar para trás, havia uma janela e, nesse panorama geral, você também nota um lampejo metálico num canto do cômodo, talvez uma faca.\n "+
-        "\nNesse momento a porta às suas costas estilhaça.\n"+
-        "\n'Saltar pela janela' ou 'pegar faca', o que fazer?'\n");
-        
+        "\nNum mundo devastado por um guerra nuclear, a civilização humana entrou em colapso.\n"+
+        "Ruínas de antigas cidades e tecnologias do pré-guerra, espalham-se pelo deserto, enquanto facções lutam pelos recursos escassos.\n "+
+        "\nUm recurso fundamental para manter-se vivo nesse mundo distópico é a vitalidade.\n"+
+        "Representa a energia e resistência do protagonista, é afetada pela fome, sede, exposição a radiação e ferimentos em combate.\n"+
+        "Inicialmente, cada protagonista tem 100 pontos de vitalidade.\nContinuar?");
+    String continuar = ler.nextLine();
+
+
     
-    String primeiraEscolha = ler.nextLine();
 
-    if (primeiraEscolha.equals("Saltar pela janela")) {
-        System.out.println(
-        "\n\n\n---------------------------------------------------------------------------------------------------------------------------------"+
-        "\nEm disparada, salta pela janela. O impacto do seu corpo no vidro é suficiente para despedaça-lo.\n"+
-        "\nA queda é brutal, sua perna esquerda serviu de amortecedor. A rapidez com que você chegou ao chão parece ter disfarçado a altura do prédio.\n"+
-        "\nMas não há tempo para pensar, latidos de cães aumentam a cada segundo.você já pode vê-los ao longe\n"+
-        "\nVocê corre por instinto. Porém há árvores em volta e bastante mato alto\n"+
-        "\n'Subir na árvore' mais próxima ou 'entrar no matagal'?\n");
-        
-        String segundaEscolha = ler.nextLine();
-        
-
-        if (segundaEscolha.equals("subir na árvore")) {
-            System.out.println(
-                "\n\n\n---------------------------------------------------------------------------------------------------------------------------------"+
-                "\nChega até a árvore mais próxima mancando e com o corpo coberto de estilhaçs de vidro.\n"+
-                "\nO desafio é insano, mas a onipresença dos latido enche seu corpo de adrenalina e te coloca no primeiro galho.\n"+
-                "\nAli, de bruços, você observa os cachorros cercarem a árvore e todo o movimento no prédio, provocado pelo tulmulto dos bichos.\n"+
-                "\nA única ação que lhe resta é fechar os olhos e esperar o fim do suplício.");
-        }
-        
-
-        else if (segundaEscolha.equals("entrar no matagal")) {
-            System.out.println(
-                "\n\n\n---------------------------------------------------------------------------------------------------------------------------------"+
-                "\nO mato é realmete alto e, pensando bem, você se quer tem forças para caminhar. Subir numa árvore é impensável;\n"+
-                "\nEncolhe-se, encurta a respiração. Mas nada disso é suficiente.\n"+
-                "\nO rastro rubro deixado por você era nítido para um ofato canino. A selvageria é indescritível.\n"+
-                "\nSua carne é devorada por cães.");
-        }
-
-        else {
-            System.out.println("Escolha inválida!");
-        }
-    }
-      
-    else if (primeiraEscolha.equals("pegar faca")) {
+    //Início da história (1° capítulo)
+    if(continuar.equals("continuar")){
         System.out.println(
             "\n\n\n---------------------------------------------------------------------------------------------------------------------------------"+
-            "\nAo tê-la em mãos percebe qua não passa de uma faca de cozinha sem serra\n"+
-            "\nMesmo assim, ao precentir que o indivíduo se aproxima por trás, vira-se desferindo-lhem um golpe certeiro na perna,\n"+
-            "\nPoderia 'seguir com a luta' ou 'tentar uma fuga'?\n");
-
-            String terceiraEscolha = ler.nextLine();
-
-        if (terceiraEscolha.equals("seguir com a luta")) {
-            System.out.println(
-                "\n\n\n---------------------------------------------------------------------------------------------------------------------------------"+
-                "\nUm segundo golpe mostra-se tão inútil quanto o primeiro. Uma pancada violenta acerta sua cabeça.\n"+
-                "\n[...]\n"+
-                "\nCom o desmaio, fica à mercê do perseguidor\n");
-        }
+            "\n[...]\nUma figura feminina vaga pela terra árida. Procura por um bunker, há muito tempo construído naquela região por sua facção.\n"+
+            "Quando avista o terreno referência do Bunker do Desertor, encontra-o totalmente saqueado.\n"+
+            "\nSuas previsões estão em estado crítico, portanto decide entrar."+
+            "Assim que entra no bunker a procura de suprimentos, percebe que tem mais alguém dentro, empunha sua arma de tubo"+
+            "Porém ao notar o brasão rubro em sua roupa, reconhece um aliado da irmandade da República da Borborema"+
+            "\nDecide se apresentar:");
         
-        else if (terceiraEscolha.equals("tentar uma fuga")) {
+
+
+        //Criação dos personagens
+        String nomeP1 = ler.nextLine();
+        Personagem persona1 = new Personagem(nomeP1);
+        System.out.println("\nO homem de olhar cruel e corpo esguio arrasta sua perna metálica até " + persona1.verNome() +" e apresenta-se:\n");
+        
+        String nomeP2 = ler.nextLine();
+        Personagem persona2 = new Personagem(nomeP2);
+        System.out.println(
+            "\nO Bunker do Desertor estava totalmente destruído, os suprimentos foram saqueados"+
+            "Mas, ainda havia alguns frascos com água."+
+            "\n" + persona2.verNome() + ", supõe que essa água fora deixada como armadilha e possivelmente está contaminada"+
+            "Contudo, " + persona1.verNome() + " depois de uma longa caminhada pelo deserto, sente seu corpo implorando por água.\n"+
+            "\n" + persona1.verNome() + " deve 'consumir' ou 'não consumir' a água do bunker?");            
+        
+        String primeiraEscolha = ler.nextLine();
+
+
+
+        // Implicações da primeira escolha
+        if (primeiraEscolha.equals("consumir")) {
             System.out.println(
-                "\n\n\n---------------------------------------------------------------------------------------------------------------------------------"+
-                "\nNo momento em que passa pelo que era a porta, seu perseguidor te agarrar.\n"+
-                "\nMas não ante de ver o corredor cada vez mais repleto de pessoas uniformaizadas.\n"+
-                "\nAgora era evidente, desde do início, fora uma fuga fadada ao fracasso");
+                "\n" + persona1.verNome() + " decide consumir a água, ignorando o risco de contaminação."+
+                "Após beber a água, " + persona1.verNome() + " sente-se mal e percebe que estava contaminada.");
+                persona1.perdaVitalidade(20);
+                persona1.verVitalidade();
+        } 
+
+        else if (primeiraEscolha.equals("não consumir")) {
+            System.out.println(
+                "\n" + persona1.verNome() + " decide não consumir a água, optando pela segurança."+
+                "Embora ainda sinta sede, " + persona1.verNome() + " sabe que é arriscado beber água desconhecida."+
+                "A sede lhe desastibliza um pouco.");
+                persona1.perdaVitalidade(5);
+                persona1.verVitalidade();
+            
         }
 
-        else {
-            System.out.println("Escolha inválida!");
-        }
-    }
 
-    else {
-        System.out.println("Escolha inválida!");
+
+
+        // 2° capítulo (Capítulo noturno)
+        System.out.println(
+            "\n\n\n---------------------------------------------------------------------------------------------------------------------------------"+
+            "\nApós deixar o bunker, " + persona1.verNome() + " e " + persona2.verNome() + " decidem procurar abrigo para a noite."+
+            "Eles encontram uma antiga estação de metrô abandonada e decidem passar a noite lá.");
+
+        // Capítulo Noturno
+        int capituloNoturno = (int) (Math.random() * 3) + 1; // Gera um número aleatório entre 1 e 3
+        switch (capituloNoturno) {
+            case 1: // Perda de 10 pontos de vitalidade devido aos danos causados pela tempestade
+                System.out.println("\nDurante a noite, eles são surpreendidos por uma tempestade de areia.");
+                System.out.println("Eles conseguem se abrigar, mas a tempestade causa danos ao seu abrigo improvisado.");
+                persona1.perdaVitalidade(10); 
+                persona2.perdaVitalidade(10); 
+                persona1.verVitalidade();
+                persona2.verVitalidade();
+                break;
+
+            case 2: // Perda de 15 pontos de vitalidade devido aos ferimentos do combate
+                System.out.println("\nEnquanto dormem, são atacados por um grupo de saqueadores que estava escondido no metrô.");
+                System.out.println("Eles conseguem se defender, mas não sem sofrer alguns ferimentos.");
+                persona1.perdaVitalidade(15); 
+                persona2.perdaVitalidade(15);
+                break;
+
+            case 3: // Nenhuma consequência para a vitalidade
+                System.out.println("\nA noite passa tranquilamente e eles conseguem descansar.");
+            
+                break;
+        }
     }
 
     ler.close();
