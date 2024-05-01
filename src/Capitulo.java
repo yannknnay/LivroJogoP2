@@ -35,31 +35,23 @@ public class Capitulo {
         persona2.perdaVitalidade(this.alteracaoVitalidade);       
     }
 
-    int escolher () {
-        boolean parametro = false;
+    int escolher() {
         int escolha = 0;
-        escaneador.nextLine();
         
-        while (!parametro) {
-
-            if (this.escolha1.equals(escolha1)) {
+        while (escolha != 1 && escolha != 2) {
+            System.out.println("Escolha " + escolha1 + " ou " + escolha2 + ": ");
+            String entrada = escaneador.nextLine();
+            
+            if (entrada.equals(escolha1)) {
                 escolha = 1;
-                parametro = true;
-            }
-
-            else if (this.escolha2.equals(escolha2)) {
+            } else if (entrada.equals(escolha2)) {
                 escolha = 2;
-                parametro = true;
+            } else {
+                System.out.println("Escolha inválida. Por favor, tente novamente.");
             }
-
-            else {
-                escaneador.nextLine();
-            }  
-
         }
-
+        
         return escolha;
     }
-
-
+    
 }

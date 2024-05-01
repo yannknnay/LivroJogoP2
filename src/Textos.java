@@ -1,25 +1,15 @@
 public class Textos {
-    
-    String prologo = 
+    String capituloA = 
     "\n\n\n---------------------------------------------------------------------------------------------------------------------------------" +
     "\nNum mundo devastado por uma guerra nuclear, a civilização humana entrou em colapso.\n" +
     "Ruínas de antigas cidades e tecnologias do pré-guerra, espalham-se pelo deserto, "+
     "enquanto facções lutam pelos recursos escassos.\n" +
-    "\nDois Viajantes precisam atravessar um deserto para chegar até um bunker e repor seus suprimentos." +
-    "Quais são os nomes deles?"+
-    "---------------------------------------------------------------------------------------------------------------------------------";
-
-    public String verPrologo() {
-        return prologo;
-    }
-
-    String capituloA = 
-    "\n\n\n---------------------------------------------------------------------------------------------------------------------------------" +
+    "\nDois viajantes, Eva e Max, precisam atravessar um deserto para chegar até um bunker e repor seus suprimentos." +
     "\nCaminhando pela estrada desértica, Eva e Max avistam ao longe uma série de estruturas que se erguem no horizonte.\n" +
     "Ao se aproximarem, percebem que se trata do bunker tão esperado, conhecido por ser um ponto de abastecimento seguro.\n" +
     "\nNo entanto, à medida que se aproximam, eles notam movimentos suspeitos nas sombras ao redor do bunker.\n" +
     "Eles têm duas opções: 'Investigar' ou 'Evitar' e seguir em frente. Qual caminho eles escolhem?\n" +
-    "---------------------------------------------------------------------------------------------------------------------------------";
+    "\n---------------------------------------------------------------------------------------------------------------------------------";
 
     public String verCapituloA() {
         return capituloA;
