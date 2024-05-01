@@ -19,36 +19,8 @@ public class Personagem {
         return vitalidade;
     }
 
-    // Ganho de vitalidade
-    public int aumentarVitalidade (int aumento) {
-        this.vitalidade += aumento;
-        if (vitalidade > 200) {
-            vitalidade = 200;
-        }
-        return vitalidade;
-    }
-
-    // Verificador de vida
-    public boolean estaVivo () {
-        if (vitalidade > 0) {
-            return true;
-        }
-        return false;
-    }
-
-    // Visualizadores
-    public String verNome () {
-        return this.nome;
-    }
-
     // Visualizador de vitalidade
     public void verVitalidade() {
         System.out.println("\nA vitalidade de " + this.nome + " é " + this.vitalidade + " pontos.");
     }
-
-
-
-
-
-
 }
